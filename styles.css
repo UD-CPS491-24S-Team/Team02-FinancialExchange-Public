@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding-left: 100;
+    outline: none;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+h{
+    
+}
+p {
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+}
