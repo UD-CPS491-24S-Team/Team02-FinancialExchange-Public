@@ -3,5 +3,24 @@
 }
 
 .body {
-    background: rgb(56, 123, 155);
+    padding: 0;
+    background: #081E50;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+
+/*
+CSS from https://bootstrap-menu.com/detail-autohide.html
+*/
+.scrolled-up {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-down {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
 }
