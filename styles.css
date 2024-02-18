@@ -56,3 +56,8 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
 .subtext {
     font-size: 10px;
 }
+
+.p-margin {
+    margin-left: 10%;
+    margin-right: 10%;
+}
