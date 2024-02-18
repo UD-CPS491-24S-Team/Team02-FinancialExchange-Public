@@ -7,7 +7,9 @@
     <title>Iceberg Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet">
@@ -36,7 +38,9 @@
         <div class="text-center">
             <h1 class="my-5">
                 Project Overview
-                <p class="fs-6 p-margin">The goal of this project is to build a functioning financial exchange with client access. In order to do this, it must be fair, fast, deterministic, reliable, redundant, have a full audit trail, and be secure for clients.</p>
+                <p class="fs-6 p-margin">The goal of this project is to build a functioning financial exchange with
+                    client access. In order to do this, it must be fair, fast, deterministic, reliable, redundant, have
+                    a full audit trail, and be secure for clients.</p>
             </h1>
         </div>
     </section>
@@ -151,16 +155,19 @@
     <section id="sprint-goals">
         <div class="text-center">
             <h1 class="my-5">Sprint Goals</h1>
-            <p class="p-margin">Successfully load start up data - risk, user, firm and product by sending commands to a sequencer and generating the resulting events.</p>
+            <p class="p-margin">Successfully load start up data - risk, user, firm and product by sending commands to a
+                sequencer and generating the resulting events.</p>
             <p class="p-margin">Have the sequencer generate unique IDs for users, firms and products.</p>
-            <p class="p-margin">Applications should listen to the event stream and create/update the necessary objects upon receipt.</p>
+            <p class="p-margin">Applications should listen to the event stream and create/update the necessary objects
+                upon receipt.</p>
             <p class="p-margin">Applications should track the inbound ESN and their outbound CSN.</p>
             <p class="p-margin">Client Portal makes the start up data available to the website.</p>
             <p class="p-margin">Client Portal authenticates web users based off of the loaded data.</p>
-            <p class="p-margin">Client Portal/Website should only display user data related to the user making the request. If the user is of type ADMIN, then the user can see all data.</p>
+            <p class="p-margin">Client Portal/Website should only display user data related to the user making the
+                request. If the user is of type ADMIN, then the user can see all data.</p>
             <p class="p-margin">Logger writes event data in human readable format to a log file.</p>
         </div>
-    </section>    
+    </section>
     <section id="demos">
         <div class="text-center">
             <h1 class="my-5">Demos</h1>
@@ -170,7 +177,8 @@
     <section id="documentation">
         <div class="text-center">
             <h1 class="my-5">Documentation</h1>
-            <p>Further documentation details can be found <a href="https://github.com/Financial-Exchange/documentation/tree/main">here</a>.</p>
+            <p>Further documentation details can be found <a
+                    href="https://github.com/Financial-Exchange/documentation/tree/main">here</a>.</p>
             <div class="image-container">
                 <div class="image-wrapper med-image">
                     <img class="doc-img" src="images/documentation/initialusecase.png">
@@ -222,20 +230,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script> // code from chatGPT
-    $(document).ready(function(){
-        $(".scroll-link").click(function(event){
-            event.preventDefault();
-            var target = $(this).attr("href");
-            var offset = $(target).offset().top;
-            var navbarHeight = $(".navbar").height(); // Get the height of the navbar
-            $("html, body").animate({
-                scrollTop: offset - navbarHeight - 20 // Subtracting the navbar height and an additional offset (e.g., 20 pixels) to adjust
-            }, 800);
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> // code from chatGPT
+        $(document).ready(function () {
+            $(".scroll-link").click(function (event) {
+                event.preventDefault();
+                var target = $(this).attr("href");
+                var offset = $(target).offset().top;
+                var navbarHeight = $(".navbar").height(); // Get the height of the navbar
+                $("html, body").animate({
+                    scrollTop: offset - navbarHeight - 20 // Subtracting the navbar height and an additional offset (e.g., 20 pixels) to adjust
+                }, 800);
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
