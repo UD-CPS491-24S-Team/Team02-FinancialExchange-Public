@@ -52,3 +52,7 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
 .image-wrapper img {
     max-width: 100%; /* Ensure images don't exceed their container width */
 }
+
+.subtext {
+    font-size: 10px;
+}
