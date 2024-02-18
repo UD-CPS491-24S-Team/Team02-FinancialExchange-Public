@@ -41,3 +41,14 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
     transform: translateY(0);
     transition: all 0.3s ease-in-out;
 }
+
+.image-wrapper {
+    display: inline-block; /* Display elements side-by-side */
+    width: 20%; /* Adjust width as needed */
+    text-align: center; /* Center-align the content */
+    margin: 0 2%; /* Add some space between the image wrappers */
+    vertical-align: top; /* Align the top edges of the elements */
+}
+.image-wrapper img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+}
