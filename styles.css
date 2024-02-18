@@ -61,3 +61,20 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
     margin-left: 10%;
     margin-right: 10%;
 }
+
+.doc-img {
+    width: 150%;
+    height: auto;
+}
+
+.med-image {
+    /* margin-top: 10%; */
+    width: 200px;
+    margin-bottom: 10%;
+}
+
+.larger-image {
+    margin-top: 5%;
+    width: 400px;
+}
+
