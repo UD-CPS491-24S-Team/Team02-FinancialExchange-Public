@@ -14,11 +14,6 @@
 
 .logo-import {
     background: url('images/FinalizedLogo.png') no-repeat;
-
-    /*margin-right: 20%;
-    margin-bottom: 5%;
-    margin-left: 15%;
-    margin-top: 5%;*/
 }
 
 .headshot {
@@ -27,20 +22,6 @@
     margin-bottom: 2.5%;
     margin-top: 2.5%;
     border-radius: 50px
-}
-
-
-/*
-CSS from https://bootstrap-menu.com/detail-autohide.html
-*/
-.scrolled-up {
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
-}
-
-.scrolled-down {
-    transform: translateY(0);
-    transition: all 0.3s ease-in-out;
 }
 
 .image-wrapper {
@@ -70,6 +51,11 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
     margin-right: 10%;
 }
 
+.thumbnail {
+    width: 20px;
+    display: inline;
+}
+
 .doc-img {
     width: 150%;
     height: auto;
@@ -84,4 +70,17 @@ CSS from https://bootstrap-menu.com/detail-autohide.html
 .larger-image {
     margin-top: 5%;
     width: 400px;
+}
+
+/*
+CSS from https://bootstrap-menu.com/detail-autohide.html
+*/
+.scrolled-up {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-down {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
 }
