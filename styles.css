@@ -52,7 +52,8 @@
 }
 
 .thumbnail {
-    width: 20px;
+    width: 15px;
+    margin-bottom: 3px;
     display: inline;
 }
 
@@ -70,6 +71,44 @@
 .larger-image {
     margin-top: 5%;
     width: 400px;
+}
+
+
+/* Sprint Accomplishments section */
+.card {
+    background-color: #1282A2;
+}
+
+.card-body {
+    display: none;
+}
+
+.card-body.active {
+    display: block;
+}
+
+.card-link {
+    color: #0C3B4B;
+}
+
+.card-link:hover {
+    color: #A3D8F8;
+    border-color: rgba(7, 71, 115) !important;
+}
+
+.card-link.active {
+    border-color: rgba(7, 71, 115) !important;
+    background-color: rgba(39, 147, 177)!important;
+    color: #A3D8F8 !important;
+}
+
+.card-link.sprint-link {
+    border: none;
+    border-bottom: rgba(7, 71, 115);
+}
+
+.footer {
+    font-size: 12px;
 }
 
 /*
