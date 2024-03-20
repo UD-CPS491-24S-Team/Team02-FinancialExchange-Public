@@ -111,6 +111,10 @@
     font-size: 12px;
 }
 
+.designdiag {
+    max-width: 60%;
+}
+
 /*
 CSS from https://bootstrap-menu.com/detail-autohide.html
 */
