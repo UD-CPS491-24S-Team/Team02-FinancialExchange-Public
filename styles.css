@@ -6,6 +6,7 @@
     padding: 0;
     background: #081E50;
     font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .fullwidth {
@@ -57,6 +58,13 @@
     display: inline;
 }
 
+.thumbnailbig {
+    max-height: 30px;
+    max-width: 30px;
+    margin-bottom: 3px;
+    display: inline;
+}
+
 .doc-img {
     width: 150%;
     height: auto;
@@ -76,7 +84,7 @@
 
 /* Sprint Accomplishments section */
 .card {
-    background-color: #1282A2;
+    background-color: #1282A2; /* Card BG*/
 }
 
 .card-body {
@@ -88,23 +96,22 @@
 }
 
 .card-link {
-    color: #0C3B4B;
+    color: #0C3B4B; /* Dark Text */
 }
 
 .card-link:hover {
-    color: #A3D8F8;
-    border-color: rgba(7, 71, 115) !important;
+    color: #A3D8F8; /* Text hover */
+    border-color: rgba(7, 71, 115) !important; /* Month hover border */
 }
 
 .card-link.active {
-    border-color: rgba(7, 71, 115) !important;
-    background-color: rgba(39, 147, 177)!important;
+    border-color: rgba(7, 71, 115) !important; /* Month active border */
+    background-color: rgba(39, 147, 177)!important; /* Active background */
     color: #A3D8F8 !important;
 }
 
 .card-link.sprint-link {
     border: none;
-    border-bottom: rgba(7, 71, 115);
 }
 
 .footer {
@@ -113,6 +120,63 @@
 
 .designdiag {
     max-width: 60%;
+}
+
+.microcard {
+	margin: 0px 0px 35px 0px;
+	padding: 0 0 15px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+    background-color: #3678a4;
+    min-height: 150px;
+	-moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.microcard:hover {
+	-webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+	box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hover-text {
+    transition-duration: 0.3s;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+
+.hover-text:hover {
+    -webkit-transform: translate(15px, 0px);
+	-moz-transform: translate(15px, 0px);
+	-ms-transform: translate(15px, 0px);
+	-o-transform: translate(15px, 0px);
+	transform: translate(15px, 0px);
+    background-color: #4288b7;
+}
+
+.stack {
+    margin: 0px 0px 35px 0px;
+	padding: 0 0 15px 0px;
+    border-radius: 5px;
+    min-height: 150px;
+    background-color: #3678a4;
+}
+
+.modal-content {
+    background-color: #3678a4;
+}
+
+.widedocuimg {
+    max-width: 700px;
+}
+
+.talldocuimg {
+    width: 350px;
 }
 
 /*

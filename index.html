@@ -26,9 +26,9 @@
       </a>
       <a class="nav-link mx-2 scroll-link" href="#project-overview">Project Overview</a>
       <a class="nav-link mx-2 scroll-link" href="#about-us">About Us</a>
-      <a class="nav-link mx-2 scroll-link" href="#sprint-goals">Development</a>
-      <a class="nav-link mx-2 scroll-link" href="#demos">Demos</a>
       <a class="nav-link mx-2 scroll-link" href="#documentation">Documentation</a>
+      <a class="nav-link mx-2 scroll-link" href="#sprint-goals">Development</a>
+      <a class="nav-link mx-2 scroll-link" href="#demos">Demo</a>
     </div>
   </nav>
   <div class="text-center">
@@ -192,11 +192,287 @@
       </h1>
     </div>
   </section>
+  <section id="documentation">
+    <div class="text-center">
+      <h1 class="mt-5">Documentation</h1>
+      <p>Extensive documentation details can be found <a
+          href="https://github.com/Financial-Exchange/documentation/tree/main?tab=readme-ov-file#table-of-contents">here</a>.</p>
+      <h3>Microservices</h3>
+      <div class="row justify-content-center">
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Iceberg UI</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Focuses on the user's experience with a dynamic and engaging interface and provides the datapage
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> This microservice employs modern web technologies, aiming to deliver an intuitive and user-friendly experience.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Client Exchange</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Manages interactions between clients and the exchange.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Handles registration, order placement and modification, retrieves aggregate data, authenticates clients.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Data Warehouse</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Synchronizes system aggregate data by retrieving updates via Kafka event channel.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Listens for Kafka events, updates aggregate data on MongoDB.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Event Stream Sequencer</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Coordinates the exchange's command and event flow, ensuring system-wide consistency.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Listens for commands, generates and broadcasts events, validates orders.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Start of Day Loader</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Initializes the system with necessary static data for daily trading operations.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Retrieves data from MongoDB, creates command headers, sends commands sequentially to Kafka channel.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Event Logger</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Records system events in a human-readable log file.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Subscribes to the Kafka Event Channel, formats event data, appends to log file.
+          </p>
+        </div>
+        <div class="card col-3 mx-3 microcard">
+          <h4 class="card-title mt-3">Matching Engine</h4>
+          <p class="card-text mx-3 text-start">
+            <b>Purpose:</b> Facilitates trades by matching buyers and sellers, ensuring market liquidity.
+          </p>
+          <p class="card-text mx-3 text-start">
+            <b>Key Functionalities:</b> Maintains order books, processes order events, executes trades based on priority.
+          </p>
+        </div>
+      </div>
+      <h3>Tech Stack</h3>
+      <div class="modal fade" id="reactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/react.png"/> React</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              React is a widely recognized JavaScript library in developing UI systems, changing the way web applications are built because it offers efficiency and flexibility. It brings a modular way, thus makes way for the ability to develop a dynamic and responsive web application. Its capability to manage the state and props smoothly allows our application to be scalable, easy maintenance, and is key in getting real-time updates important for the display of live stock prices and dynamics of the user portfolio.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="sassModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/sass.png"/> SASS (Syntactically Awesome Style Sheets)</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself.
+              Sass consists of two syntaxes. The original syntax, called "the indented syntax," uses a syntax similar to Haml. It uses indentation to separate code blocks and newline characters to separate rules. The newer syntax, SCSS (Sassy CSS), uses block formatting like that of CSS. It uses braces to denote code blocks and semicolons to separate rules within a block. The indented syntax and SCSS files are traditionally given the extensions .sass and .scss, respectively.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bootstrapModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/bootstrap.png"/> Bootstrap</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Bootstrap is a popular front-end framework for developing responsive and mobile-first websites and web applications. It provides a collection of pre-designed templates, CSS styles, and JavaScript components, allowing developers to create visually appealing and functional interfaces with ease. Bootstrap utilizes a grid-based layout system, enabling developers to arrange elements on a web page in a responsive manner, ensuring compatibility across various devices and screen sizes. Its extensive documentation and robust community support make it an efficient tool for rapidly prototyping and building web projects. By leveraging Bootstrap's components and utilities, developers can streamline the development process and focus more on the functionality and user experience of their applications.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="nodeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/nodejs.png"/> Node.js</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Node.js, is a flexible JavaScript runtime that is very well known for the non-blocking, event-driven architecture that it features. It allows handling multiple simultaneous connections in a very efficient way—a thing that is extremely important for this platform, which requires real-time processing of data. With the vast npm ecosystem, features can be developed at an accelerated rate using Node.js. This is an integrated environment for our application's frontend and backend. It therefore makes for the ideal support to live stock updates, trade executions, instant user notifications and prepares the robust and scalable basis that our platform's complex features demand.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="figmaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/figma.png"/> Figma</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Figma design is for people to create, share, and test designs for websites, mobile apps, and other digital products and experiences. It is a popular tool for designers, product managers, writers and developers and helps anyone involved in the design process contribute, give feedback, and make better decisions, faster.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="adobeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/adobe.png"/> Adobe Illustrator</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Adobe Illustrator is a versatile graphic design software that is essential for prototyping branding and creating art for websites. With its powerful vector-based tools, Illustrator enables designers to craft logos, icons, illustrations, and other visual elements with precision and scalability. When prototyping branding for a website, Illustrator allows designers to explore different concepts, refine designs, and create cohesive visual identities that resonate with the target audience. 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="springbootModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/springboot.png"/> Spring Boot Framework</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Spring Boot is a Java framework that streamlines the development of web applications and microservices. By offering convention-over-configuration defaults and embedded servers, it reduces setup time and eliminates boilerplate code. With built-in support for essential features like security and data access, Spring Boot enables rapid development while promoting best practices. Its seamless integration with other Spring projects and third-party libraries makes it a preferred choice for building scalable and resilient applications.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="mongodbModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/mongodb.png"/> MongoDB</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              We chose a MongoDB-based NoSQL database, among other things, owing to its high performance, availability, and scalability. This schemaless feature enables the storage of data in a flexible, adaptable format, basically with the adaptability the trading platform required. This is of great advantage when it comes to the dynamic growth of data structures such as user profiles, stock transactions, and market data. At the same time, with its broad scaling capabilities and superior performance, MongoDB represents a cost-effective platform for serving the large volumes of data our application produces.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="kafkaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/kafka.png"/> Kafka</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Apache Kafka is a distributed streaming platform designed for handling real-time data feeds efficiently. It acts as a distributed event log, allowing producers to publish records to topics and consumers to subscribe and process this data in real-time or at their own pace. With its fault-tolerant and scalable architecture, Kafka is widely used for building event-driven architectures, real-time analytics, and data integration pipelines across various industries. Its ecosystem includes connectors and libraries that make it a versatile choice for stream processing applications.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="javaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/java.png"/> Java</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies. We chose to use Java due to our team having previous experience working in Java, which in turn reduced the development time.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="drawioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/drawio.png"/> Draw.io</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Draw.io is a user-friendly online diagramming tool that allows users to create a wide range of diagrams, including flowcharts, network diagrams, UML diagrams, and more. It offers a simple drag-and-drop interface with a vast library of shapes and icons, making it easy for users to design visually appealing diagrams. Draw.io supports real-time collaboration, allowing multiple users to work on the same diagram simultaneously. With its cloud-based storage and seamless integration with various platforms, Draw.io is a popular choice for teams and individuals looking to create professional-looking diagrams quickly and efficiently.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="markdownModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/markdown.png"/> Markdown</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              Markdown is a lightweight markup language used for formatting plain text documents. It enables users to add basic formatting elements such as headers, lists, links, and emphasis to their text using simple syntax. Markdown documents are easy to read in their raw form and can be converted into HTML or other formats for publication. It is commonly used for writing documentation, README files, forum posts, and even emails due to its simplicity and universality across various platforms and text editors.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="plantumlModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><img class="thumbnailbig" src="images/plantuml.png"/> PlantUML</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              PlantUML is a versatile tool for creating diagrams using a simple textual description language. It allows users to generate various types of diagrams, including UML diagrams, flowcharts, and sequence diagrams, by writing a series of commands in a text editor. PlantUML then converts these textual descriptions into visually appealing diagrams, which can be easily integrated into documentation, presentations, or code comments. Its simplicity and ease of use make it a popular choice for quickly sketching out ideas or visualizing software architecture in a collaborative environment.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="card col-3 mx-3 stack">
+          <h3 class="card-title mt-3">Frontend</h3>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#reactModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/react.png"/> React</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#sassModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/sass.png"/> SASS</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#bootstrapModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/bootstrap.png"/> Bootstrap</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#nodeModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/nodejs.png"/> Node.js</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#figmaModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/figma.png"/> Figma</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#adobeModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/adobe.png"/> Adobe Illustrator</h4>
+        </div>
+        <div class="card col-3 mx-3 stack">
+          <h3 class="card-title mt-3">Backend</h3>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#javaModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/java.png"/> Java</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#springbootModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/springboot.png"/> Spring Boot</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#mongodbModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/mongodb.png"/> MongoDB</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#kafkaModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/kafka.png"/> Kafka</h4>
+        </div>
+        <div class="card col-3 mx-3 stack">
+          <h3 class="card-title mt-3">Documentation</h3>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#drawioModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/drawio.png"/> Draw.io</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#markdownModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/markdown.png"/> Markdown</h4>
+          <h4 type="button" data-bs-toggle="modal" data-bs-target="#plantumlModal" class="card-text mx-3 text-start hover-text"><img class="thumbnailbig" src="images/plantuml.png"/> PlantUML</h4>
+        </div>
+      </div>
+      <h3>Diagrams</h3>
+      <div class="row justify-content-center">
+        <img class="col-12 widedocuimg" src="images/documentation/design2.png">
+      </div>
+      <div class="row mt-4 justify-content-center">
+        <img class="col-3 talldocuimg" src="images/documentation/registereduser.png">
+        <img class="col-3 talldocuimg" src="images/documentation/adminuser.png">
+      </div>
+    </div>
+  </section>
   <section id="sprint-goals">
     <div class="text-start">
-      <h1 class="mt-4 text-center">Development Progress</h1>
+      <h1 class="mt-2 text-center">Development Progress</h1>
 
-      <div class="mt-3 mx-4">
+      <div class="mt-5 mx-5">
         <div class="card">
           <div class="card-header">
             <div class="nav nav-tabs card-header-tabs">
@@ -419,22 +695,20 @@
             <div class="sprint-content month3-default card-body active" id="sprint-overview3">
               <h3>Finalization Phase</h3>
               <p>
-                lorem ipsum
+                Our 3rd month was focused around finalizing the whole project. This involved the
+                dockerization of all our microservices, extensive documentation, and wrapping up
+                UI design. The dockerization allowed us to run all of our microservices simultaneously
+                for testing.
               </p>
               <img class="designdiag my-3" src="images/documentation/design2.png" />
               <h3>Demo Video</h3>
-              <p>
-                Demo video WIP
-              </p>
-              <iframe max-width="50%" src=""></iframe>
+              <iframe class="mb-3" max-width="50%" src="https://www.youtube.com/embed/7MDNZKwELVc?si=HljW5bP7uAOIr02O"></iframe>
               <h3>Accomplishments</h3>
               <ul>
-                <li>Completed all front-end pages</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Landing page UI</li>
+                <li>Dockerization of microservices</li>
+                <li>Record user and firm capital</li>
+                <li>Documented all the microservices</li>
               </ul>
               <p class="footer mb-0">4/5/24 - 4/17/24</p>
             </div>
@@ -456,6 +730,10 @@
                   <h3>Accomplishments</h3>
                   <li>Improved all documentation across all teams</li>
                   <li>Finished front-end functionality</li>
+                  <li>Landing page UI</li>
+                  <li>Dockerization of microservices</li>
+                  <li>Record user and firm capital</li>
+                  <li>Documented all the microservices</li>
                 </div>
               </div>
               <p class="footer mb-0">4/5/24 - 4/17/24</p>
@@ -466,23 +744,8 @@
   </section>
   <section id="demos">
     <div class="text-center">
-      <h1 class="mt-5">Demos</h1>
-      <iframe max-width="50%" src="https://www.youtube.com/embed/_7Yb7ew9GTQ"></iframe>
-    </div>
-  </section>
-  <section id="documentation">
-    <div class="text-center">
-      <h1 class="mt-5">Documentation</h1>
-      <p>Further documentation details can be found <a
-          href="https://github.com/Financial-Exchange/documentation/tree/main">here</a>.</p>
-      <div class="image-container">
-        <div class="image-wrapper med-image">
-          <img class="doc-img" src="images/documentation/initialusecase.png">
-        </div>
-        <div class="image-wrapper larger-image">
-          <img class="doc-img" src="images/documentation/design.png">
-        </div>
-      </div>
+      <h1 class="mt-5">Demo</h1>
+      <iframe class="mb-5" max-width="50%" src="https://www.youtube.com/embed/7MDNZKwELVc?si=HljW5bP7uAOIr02O"></iframe>
     </div>
   </section>
 
